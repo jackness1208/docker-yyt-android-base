@@ -11,9 +11,9 @@ module.exports = {
   rewriteHistory: true,
 
   // port 映射
-  // portMap: {
-  //   80:80
-  // },
+  portMap: {
+    4723:4723
+  }
 
   // 挂载设置 [本地目录:docker 目录]
   // volume: {
