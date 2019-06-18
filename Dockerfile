@@ -74,5 +74,13 @@ RUN rm -rf ~/google-chrome-stable_current_amd64.deb
 # 开放端口
 EXPOSE 4723
 
-# 运行 appium
-ENTRYPOINT appium
+# copy tasks
+COPY tasks/* /root/tasks/
+
+RUN chmod -R 777 /root/tasks/
+
+# 运行 entrypoint
+CMD tasks/entry_point.sh
+
+
+# TODO: vncd
