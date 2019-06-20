@@ -44,7 +44,7 @@ RUN sudo tar zxvf cmake-3.9.1-Linux-x86_64.tar.gz
 RUN sudo mv cmake-3.9.1-Linux-x86_64 /opt/cmake-3.9.1
 RUN sudo ln -sf /opt/cmake-3.9.1/bin/*  /usr/bin/ 
 
-RUN apt-get update
+RUN apt-get --allow-releaseinfo-change update
 RUN apt-get install -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 
 # # 安装 make
